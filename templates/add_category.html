@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form action="" class="mt-3" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+
+                  <div class="mt-3">
+                    <input type="submit" value="Chop etish" class="btn btn-success">
+                    <input type="reset" value="Tozalash" class="btn btn-danger">
+                    <a href="{% url 'home-page' %}" class="btn btn-primary">Bosh sahifaga</a>
+                  </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+<!-- <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">kategoriya nomi</label>
+  <input type="text" class="form-control" name="nomi" id="exampleFormControlTextarea1" placeholder="kategoriya nomi">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">kategoriya mazmuni</label>
+  <textarea class="form-control" name="mazmuni" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div> -->
